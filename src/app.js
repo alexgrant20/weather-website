@@ -58,7 +58,7 @@ app.get('/weather',(req,res) =>{
                 error:error
             })  
         }
-        forecast(latitude,longitude,(error,{weather,bodyTemp,realFeel}) => {
+        forecast(latitude,longitude,(error,{forecastReport}) => {
             if(error){
                 return res.send({
                     error:error
@@ -66,7 +66,7 @@ app.get('/weather',(req,res) =>{
             }
             res.send({
                 location: location,
-                forecastReport: `${weather}. The temperature is  ${bodyTemp} celcius and it's feel's like ${realFeel} outside`,
+                forecastReport: forecastReport
             })
         })
        
