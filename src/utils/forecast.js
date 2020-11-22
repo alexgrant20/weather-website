@@ -15,8 +15,8 @@ const forecast = (latitude,longitude,callback) => {
                 realFeel: curBod.feelslike,
                 humidity: curBod.humidity,
                 visibilty: curBod.visibility,
-                forecastReport: `${curBod.weather_descriptions[0]}. The temperature is  ${curBod.temperature} celcius and it's feel's like ${curBod.feelslike} outside. 
-                                    visibilty is ${curBod.visibility}. Humidity is ${curBod.humidity}.`,
+                forecastReport: `${curBod.weather_descriptions[0]}. It is currently ${curBod.temperature} degrees out. It's feel's like ${curBod.feelslike} degrees out. 
+                                visibilty is ${curBod.visibility}. Humidity is ${curBod.humidity}%.`,
             })
         }
     })
