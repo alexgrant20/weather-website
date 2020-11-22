@@ -6,6 +6,7 @@ const hbs = require('hbs')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Path for express
 const pathToPublic = path.join(__dirname,'../public')
@@ -92,8 +93,8 @@ app.get('*',(req,res)=>{
 // app.com
 // app.com/about
 
-app.listen(3000,() =>{
-    console.log("Serves is live on port 3000")
+app.listen(port,() =>{
+    console.log(`Serves is live on port ${port}`)
 })
 
 //RUNNING A server is a ASYNCHRONUS PROCESS
